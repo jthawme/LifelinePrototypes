@@ -1,0 +1,34 @@
+.block {
+  width: 100%;
+  height: 80vh;
+
+  outline: 1px solid red;
+
+  scroll-snap-align: center;
+
+  padding: 20px;
+
+  & > div {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    background-color: blue;
+
+    border-radius: 50px;
+
+    span {
+      font-size: 15vw;
+
+      font-weight: bold;
+
+      color: white;
+
+      will-change: transform;
+    }
+  }
+}
