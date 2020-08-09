@@ -10,7 +10,6 @@ import styles from "./Block.module.scss";
 
 const ParallaxBlock = ({ windowWidth, windowHeight }) => {
   const [elementTop, setElementTop] = useState(0);
-  const [elementHeight, setElementHeight] = useState(0);
   const ref = useRef(null);
   const { scrollY } = useViewportScroll();
 
@@ -50,7 +49,6 @@ const ParallaxBlock = ({ windowWidth, windowHeight }) => {
 
   useLayoutEffect(() => {
     setElementTop(ref.current.offsetTop);
-    setElementHeight(ref.current.clientHeight);
   }, [ref, windowHeight]);
 
   return (
