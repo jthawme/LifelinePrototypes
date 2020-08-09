@@ -21,8 +21,8 @@ const ParallaxBlock = ({ windowWidth, windowHeight }) => {
   const xRange = [
     elementTop - windowHeight * 0.8,
     elementTop - windowHeight * 0.5,
-    elementTop + elementTop + windowHeight * 0.3,
-    elementTop + elementTop + windowHeight * 0.5,
+    elementTop + elementTop + windowHeight * -0.5,
+    elementTop + elementTop + windowHeight * 0.4,
   ];
 
   // const xRange = [-200, -100, 100, 200];

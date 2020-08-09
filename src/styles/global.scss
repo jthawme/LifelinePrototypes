@@ -17,3 +17,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.page-lock {
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.home-link {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+
+  padding: 10px;
+  background-color: red;
+}

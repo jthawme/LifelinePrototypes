@@ -1,0 +1,49 @@
+.page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.svgConnect {
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  transform: translate3d(0, -50%, 0);
+
+  width: 50vw;
+
+  path {
+    stroke-width: 2px;
+  }
+
+  &.right {
+    left: 0;
+    right: auto;
+  }
+}
+
+.svgLine {
+  position: absolute;
+
+  top: 50%;
+  left: calc(100% - 1px);
+
+  width: calc(100vw + 2px);
+
+  transform: translate3d(0, -50%, 0);
+
+  svg {
+    width: 100%;
+  }
+
+  path {
+    stroke-width: 1px;
+  }
+
+  &.right {
+    left: auto;
+    right: calc(100vw - 1px);
+  }
+}

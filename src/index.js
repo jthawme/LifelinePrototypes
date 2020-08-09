@@ -1,21 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import App from "./pages/App/App";
-import ParallaxScroll from "./pages/ParallaxScroll/ParallaxScroll";
+import { routes } from "./pages/App/routes";
 
 import "./styles/global.scss";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <Link to="/" className="home-link">
+        Home
+      </Link>
       <Switch>
-        <Route path="/scroll">
-          hello
-          <ParallaxScroll />
-        </Route>
+        {routes.map(({ to, component }) => (
+          <Route key={to} path={to} component={component} />
+        ))}
         <Route exact path="/">
           <App />
         </Route>

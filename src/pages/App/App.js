@@ -1,23 +1,19 @@
 import React from "react";
 
+import { routes } from "./routes";
 import styles from "./App.module.scss";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className={styles.app}>
-      <header className={styles.header}>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className={styles.link}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {routes.map(({ to, label }) => (
+          <li key={to}>
+            <Link to={to}>{label}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
