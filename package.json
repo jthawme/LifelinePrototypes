@@ -14,6 +14,7 @@
     "react-hook-use-window-dimensions": "^1.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-swipeable": "^5.5.1",
     "scroll-snap": "^3.0.2"
   },
   "scripts": {

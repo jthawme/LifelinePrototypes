@@ -1,6 +1,7 @@
 import ParallaxScroll from "../ParallaxScroll/ParallaxScroll";
 import LifelineTransfer from "../LifelineTransfer/LifelineTransfer";
 import Gradients from "../Gradients/Gradients";
+import SwipeDirections from "../SwipeDirections/SwipeDirections";
 
 export const routes = [
   {
@@ -17,5 +18,10 @@ export const routes = [
     to: "/gradients",
     label: "Gradients 001",
     component: Gradients,
+  },
+  {
+    to: "/directions",
+    label: "Directions test 001",
+    component: SwipeDirections,
   },
 ];

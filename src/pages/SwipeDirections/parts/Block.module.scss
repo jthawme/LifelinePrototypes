@@ -1,0 +1,19 @@
+.block {
+  position: relative;
+
+  background-color: rgb(113, 188, 238);
+
+  height: 70vh;
+
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.arrow {
+  position: absolute;
+
+  bottom: 20px;
+  right: 20px;
+
+  font-size: 24px;
+}
