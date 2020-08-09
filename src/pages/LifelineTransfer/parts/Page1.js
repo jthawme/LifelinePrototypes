@@ -43,7 +43,11 @@ const Page1 = () => {
       variants={variants}
       className={styles.page}
     >
-      Page 1 <Link to="/lifeline/other">Go to next page</Link>
+      <p>
+        Consider this page the 'home' page. Try navigating off to a strand.
+        <br />
+        <Link to="/lifeline/other">Open story</Link>
+      </p>
       <div className={[styles.left, styles.svgConnect].join(" ")}>
         <Left />
       </div>

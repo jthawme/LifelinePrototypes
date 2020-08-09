@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import PagesProvider from "./PagesContext";
 import Page1 from "./parts/Page1";
 import Page2 from "./parts/Page2";
-import { PageLock } from "../common/PageLock";
+import { PageLock } from "../../common/PageLock";
 
 const LifelineTransfer = () => {
   const location = useLocation();

@@ -45,7 +45,13 @@ const Page2 = () => {
       variants={variants}
       className={styles.page}
     >
-      Page 2 <button onClick={onClick}>Exit to home page</button>
+      <p>
+        Notice that if you actively exit to the home page, it transitions one
+        way, but clicking 'back' on your device/browser will return you the way
+        you came
+        <br />
+        <button onClick={onClick}>Exit to home page</button>
+      </p>
       <div className={[styles.right, styles.svgConnect].join(" ")}>
         <Right />
       </div>

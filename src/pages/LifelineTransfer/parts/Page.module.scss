@@ -2,6 +2,30 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+
+  padding: 10px;
+
+  p {
+    line-height: 1.4;
+  }
+
+  a,
+  button {
+    display: inline-block;
+
+    background-color: #00f;
+    color: white;
+
+    padding: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border: 0;
+    border-radius: 0;
+
+    margin-top: 10px;
+  }
 }
 
 .svgConnect {
@@ -14,8 +38,11 @@
 
   width: 50vw;
 
+  color: coral;
+
   path {
-    stroke-width: 2px;
+    stroke-width: 4px;
+    stroke-linecap: round;
   }
 
   &.right {
@@ -34,12 +61,14 @@
 
   transform: translate3d(0, -50%, 0);
 
+  color: coral;
+
   svg {
     width: 100%;
   }
 
   path {
-    stroke-width: 1px;
+    stroke-width: 2px;
   }
 
   &.right {
