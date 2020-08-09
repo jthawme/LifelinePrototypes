@@ -1,5 +1,6 @@
 import ParallaxScroll from "../ParallaxScroll/ParallaxScroll";
 import LifelineTransfer from "../LifelineTransfer/LifelineTransfer";
+import Gradients from "../Gradients/Gradients";
 
 export const routes = [
   {
@@ -11,5 +12,10 @@ export const routes = [
     to: "/lifeline",
     label: "Attaching lifeline 001",
     component: LifelineTransfer,
+  },
+  {
+    to: "/gradients",
+    label: "Gradients 001",
+    component: Gradients,
   },
 ];

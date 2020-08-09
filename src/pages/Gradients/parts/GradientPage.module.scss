@@ -1,0 +1,78 @@
+.page {
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  top: calc(var(--y-pos) * 100%);
+  left: calc(var(--x-pos) * 100%);
+
+  background-color: var(--background-c);
+  z-index: var(--z-idx);
+}
+
+.gradient {
+  position: absolute;
+
+  pointer-events: none;
+
+  &.top {
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50vw;
+
+    background: linear-gradient(to top, transparent 65%, var(--gradient-color));
+  }
+
+  &.bottom {
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50vw;
+
+    background: linear-gradient(
+      to bottom,
+      transparent 65%,
+      var(--gradient-color)
+    );
+  }
+
+  &.right {
+    right: 0;
+    top: 0;
+
+    width: 50vw;
+    height: 100%;
+
+    background: linear-gradient(
+      to right,
+      transparent 65%,
+      var(--gradient-color)
+    );
+  }
+
+  &.left {
+    left: 0;
+    top: 0;
+
+    width: 50vw;
+    height: 100%;
+
+    background: linear-gradient(
+      to left,
+      transparent 65%,
+      var(--gradient-color)
+    );
+  }
+}
