@@ -21,6 +21,7 @@ const Block = ({ children, background }) => {
         history.push(`/directions/page/${background.substring(1)}`);
       }
     },
+    trackMouse: true,
   });
 
   const x = useTransform(xPos, [0, 400], [0, -100]);

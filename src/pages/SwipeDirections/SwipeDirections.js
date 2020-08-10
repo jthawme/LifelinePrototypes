@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation, Link } from "react-router-dom";
 
 import Block from "./parts/Block";
 import OtherPage from "./parts/OtherPage";
@@ -12,7 +12,7 @@ const variants = {
   initial: { opacity: 0, y: "50%" },
   enter: { x: 0, y: 0, opacity: 1, transition },
   exit: {
-    x: "-200%",
+    x: "-100%",
     transition,
   },
 };
@@ -31,7 +31,7 @@ const SwipeDirections = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence initial={false}>
       <Switch location={location} key={location.pathname}>
         {/* <Route exact path="/lifeline" component={Page1} />
         <Route exact path="/lifeline/other" component={Page2} /> */}
@@ -48,6 +48,12 @@ const SwipeDirections = () => {
               <Block background={c}>
                 <p>This is a potential story</p>
                 <p>Swipe me!</p>
+                <p>
+                  Or{" "}
+                  <Link to={`/directions/page/${c.substring(1)}`}>
+                    Click me
+                  </Link>
+                </p>
               </Block>
             ))}
           </motion.main>

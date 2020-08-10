@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import styles from "./OtherPage.module.scss";
 import { Link } from "react-router-dom";
 
-const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
+const transition = { duration: 1 };
 const variants = {
   initial: { x: "100%" },
-  enter: { x: 0, y: 0, opacity: 1, transition },
+  enter: { position: "fixed", top: 0, x: 0, y: 0, opacity: 1, transition },
   exit: {
     y: "-50%",
     opacity: 0,
-    transition: { duration: 1, ...transition },
+    transition,
   },
 };
 

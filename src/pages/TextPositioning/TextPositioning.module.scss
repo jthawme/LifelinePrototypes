@@ -1,0 +1,32 @@
+.wrapper {
+  padding: 80vh 0;
+}
+
+.page {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: grey;
+  height: 60vh;
+
+  h1 {
+    transition: {
+      duration: 1s;
+      property: transform opacity;
+    }
+
+    text-align: center;
+  }
+}
+
+.top h1 {
+  transform: translate3d(0, -20vh, 0) scale(0.75);
+  opacity: 0.5;
+}
+
+.bottom h1 {
+  transform: translate3d(0, 20vh, 0) scale(0.75);
+  opacity: 0.5;
+}

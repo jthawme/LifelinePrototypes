@@ -2,6 +2,7 @@ import ParallaxScroll from "../ParallaxScroll/ParallaxScroll";
 import LifelineTransfer from "../LifelineTransfer/LifelineTransfer";
 import Gradients from "../Gradients/Gradients";
 import SwipeDirections from "../SwipeDirections/SwipeDirections";
+import TextPositioning from "../TextPositioning/TextPositioning";
 
 export const routes = [
   {
@@ -23,5 +24,10 @@ export const routes = [
     to: "/directions",
     label: "Directions test 001",
     component: SwipeDirections,
+  },
+  {
+    to: "/text",
+    label: "Text positioning 001",
+    component: TextPositioning,
   },
 ];
