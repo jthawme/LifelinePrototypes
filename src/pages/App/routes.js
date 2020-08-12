@@ -5,6 +5,7 @@ import SwipeDirections from "../SwipeDirections/SwipeDirections";
 import TextPositioning from "../TextPositioning/TextPositioning";
 import BrokenWords from "../BrokenWords/BrokenWords";
 import ScrollPercentage from "../ScrollPercentage/ScrollPercentage";
+import HorizontalScroll from "../HorizontalScroll/HorizontalScroll";
 
 export const routes = [
   {
@@ -41,5 +42,10 @@ export const routes = [
     to: "/percentage",
     label: "Scrolling homepage 002",
     component: ScrollPercentage,
+  },
+  {
+    to: "/horizontal",
+    label: "Horizontal sections 001",
+    component: HorizontalScroll,
   },
 ];

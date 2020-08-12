@@ -1,0 +1,45 @@
+.horizontal {
+  display: grid;
+
+  grid-template-columns: 75vw;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
+  overflow: auto;
+
+  width: 100vw;
+  height: 100vh;
+
+  -webkit-overflow-scrolling: touch;
+
+  &Page {
+    width: 75vw;
+
+    padding: 20px;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        padding-top: calc(#{($i - 1) * 10}vh + 20px);
+      }
+    }
+  }
+}
+
+.progress {
+  position: fixed;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform: translate3d(-50%, 0, 0);
+
+  path {
+    stroke-dasharray: 610;
+    stroke-dashoffset: var(--stroke-offset);
+
+    transition: {
+      property: stroke-dasharray;
+      duration: 0.05s;
+    }
+  }
+}
