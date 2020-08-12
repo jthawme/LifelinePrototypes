@@ -3,6 +3,7 @@ import LifelineTransfer from "../LifelineTransfer/LifelineTransfer";
 import Gradients from "../Gradients/Gradients";
 import SwipeDirections from "../SwipeDirections/SwipeDirections";
 import TextPositioning from "../TextPositioning/TextPositioning";
+import BrokenWords from "../BrokenWords/BrokenWords";
 
 export const routes = [
   {
@@ -29,5 +30,10 @@ export const routes = [
     to: "/text",
     label: "Text positioning 001",
     component: TextPositioning,
+  },
+  {
+    to: "/words",
+    label: "Broken Words 001",
+    component: BrokenWords,
   },
 ];
