@@ -4,6 +4,7 @@ import Gradients from "../Gradients/Gradients";
 import SwipeDirections from "../SwipeDirections/SwipeDirections";
 import TextPositioning from "../TextPositioning/TextPositioning";
 import BrokenWords from "../BrokenWords/BrokenWords";
+import ScrollPercentage from "../ScrollPercentage/ScrollPercentage";
 
 export const routes = [
   {
@@ -35,5 +36,10 @@ export const routes = [
     to: "/words",
     label: "Broken Words 001",
     component: BrokenWords,
+  },
+  {
+    to: "/percentage",
+    label: "Scrolling homepage 002",
+    component: ScrollPercentage,
   },
 ];
