@@ -6,6 +6,7 @@ import TextPositioning from "../TextPositioning/TextPositioning";
 import BrokenWords from "../BrokenWords/BrokenWords";
 import ScrollPercentage from "../ScrollPercentage/ScrollPercentage";
 import HorizontalScroll from "../HorizontalScroll/HorizontalScroll";
+import CurvedText from "../CurvedText/CurvedText";
 
 export const routes = [
   {
@@ -47,5 +48,10 @@ export const routes = [
     to: "/horizontal",
     label: "Horizontal sections 001",
     component: HorizontalScroll,
+  },
+  {
+    to: "/curve",
+    label: "Curved Text 001",
+    component: CurvedText,
   },
 ];
