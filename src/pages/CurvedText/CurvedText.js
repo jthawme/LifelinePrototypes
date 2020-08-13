@@ -17,13 +17,25 @@ const getCurve = (max = 200, offset = 150) => {
   return curves.join(" ");
 };
 
+const getSensibleCurve = (max = 200, offset = 50) => {
+  const p = (n) => n + offset;
+  return `M ${p(0)} ${p(0)} Q ${p(50)} ${p(0)} ${p(100)} ${p(100)} T ${p(
+    200
+  )} ${p(150)} T ${p(300)} ${p(200)} T ${p(400)} ${p(100)}`;
+};
+
 const CurvedText = () => {
   const [curve, setCurve] = useState(getCurve());
+  // const [curve, setCurve] = useState(getSensibleCurve());
   const [text, setText] = useState("Type some text");
   const [showCurve, setShowCurve] = useState(false);
 
   const newCurve = () => {
     setCurve(getCurve());
+  };
+
+  const getSensible = () => {
+    setCurve(getSensibleCurve());
   };
 
   return (
@@ -46,6 +58,9 @@ const CurvedText = () => {
         <button type="button" onClick={newCurve}>
           New curve
         </button>
+        <button type="button" onClick={getSensible}>
+          Sensible curve
+        </button>
         <p>
           the curves will be purposefully whacky, because why not for a test
         </p>
@@ -60,8 +75,10 @@ const CurvedText = () => {
             fill="transparent"
           />
 
-          <text width="500" alignment-baseline="middle">
-            <textPath xlinkHref="#curve">{text}</textPath>
+          <text width="500">
+            <textPath xlinkHref="#curve" alignmentBaseline="central">
+              {text}
+            </textPath>
           </text>
         </svg>
 
