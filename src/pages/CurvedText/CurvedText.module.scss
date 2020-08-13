@@ -1,6 +1,17 @@
 .main {
-  form {
-    padding: 20px;
+  .actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    padding: 10px;
+
+    justify-content: flex-start;
+
+    input[type="text"] {
+      padding: 10px;
+    }
   }
 
   svg {

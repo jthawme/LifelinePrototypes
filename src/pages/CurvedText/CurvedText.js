@@ -6,7 +6,7 @@ const getCurve = (max = 200, offset = 150) => {
   const r = () => Math.floor(Math.random() * max) + offset;
   const curves = [
     `M ${r()} ${r()}`,
-    ...new Array(Math.floor(Math.random() * 4) + 3).fill(0).map((v, i) => {
+    ...new Array(Math.floor(Math.random() * 4) + 7).fill(0).map((v, i) => {
       if (i === 0) {
         return `Q ${r()} ${r()} ${r()} ${r()}`;
       } else {
@@ -20,6 +20,7 @@ const getCurve = (max = 200, offset = 150) => {
 const CurvedText = () => {
   const [curve, setCurve] = useState(getCurve());
   const [text, setText] = useState("Type some text");
+  const [showCurve, setShowCurve] = useState(false);
 
   const newCurve = () => {
     setCurve(getCurve());
@@ -27,24 +28,37 @@ const CurvedText = () => {
 
   return (
     <main className={styles.main}>
-      <form>
+      <div class={styles.actions}>
         <input
           onChange={(e) => setText(e.target.value)}
           value={text}
           type="text"
           placeholder="Type words"
         />
+        <label>
+          <span>Show curve</span>
+          <input
+            type="checkbox"
+            onChange={(e) => setShowCurve(e.target.checked)}
+            value={showCurve}
+          />
+        </label>
         <button type="button" onClick={newCurve}>
           New curve
         </button>
         <p>
           the curves will be purposefully whacky, because why not for a test
         </p>
-      </form>
+      </div>
 
       <div className={styles.display}>
         <svg viewBox="0 0 500 500">
-          <path id="curve" d={curve} fill="transparent" />
+          <path
+            id="curve"
+            d={curve}
+            stroke={showCurve ? "black" : "transparent"}
+            fill="transparent"
+          />
 
           <text width="500" alignment-baseline="middle">
             <textPath xlinkHref="#curve">{text}</textPath>
